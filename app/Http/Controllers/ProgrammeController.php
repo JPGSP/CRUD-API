@@ -57,9 +57,7 @@ class ProgrammeController extends Controller
             $programmeToSave->setChannel($dataRead['channel']);
             $programmeToSave->setBroadcast($dataRead['broadcast']);
             $programmeToSave->setRepeat($dataRead['repeat']);
-            if (!empty($dataRead['genre'])) {
-                $programmeToSave->setGenre($dataRead['genre']);
-            }
+            $programmeToSave->setGenre($dataRead['genre']);
             $programmeToSave->save();
 
             return response()->json([
