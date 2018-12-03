@@ -2,18 +2,26 @@
 
 namespace App\Http\Controllers;
 
+use App\Programme;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class ProgrammeController extends Controller
 {
+
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
+     * @return JsonResponse
      */
-    public function index()
+    public function index(): JsonResponse
     {
-        //
+        $programmes = Programme::all();
+
+        return response()->json([
+            'message' => 'Request succesfull',
+            'data'    => $programmes,
+            'status'  => Response::HTTP_OK,
+        ]);
     }
 
     /**
