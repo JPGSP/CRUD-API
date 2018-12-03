@@ -15,7 +15,11 @@ class CreateProgrammesTable extends Migration
     {
         Schema::create('programmes', function (Blueprint $table) {
             $table->increments('id');
-            $table->timestamps();
+            $table->string('title');
+            $table->string('channel');
+            $table->dateTime('broadcast');
+            $table->boolean('repeat');
+            $table->string('genre')->nullable();
         });
     }
 
