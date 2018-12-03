@@ -94,13 +94,32 @@ class ProgrammeController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * @param int $id
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @throws \Exception
+     *
+     * @return JsonResponse
      */
-    public function destroy($id)
+    public function destroy(int $id): JsonResponse
     {
-        //
+        /** @var Programme $programmeFound */
+        $programmeFound = Programme::find($id);
+
+        if (empty($programmeFound)) {
+            $response = response()->json([
+                'message' => 'Resource not found',
+                'data'    => null,
+                'status'  => Response::HTTP_NOT_FOUND,
+            ]);
+        } else {
+            $programmeFound->delete();
+
+            $response = response()->json([
+                'message' => 'Request succesfully',
+                'data'    => null,
+                'status'  => Response::HTTP_NO_CONTENT,
+            ]);
+        }
+        return $response;
     }
 }
