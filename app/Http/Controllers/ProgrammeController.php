@@ -6,6 +6,7 @@ use App\Programme;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Validator;
 
 class ProgrammeController extends Controller
 {
@@ -31,24 +32,42 @@ class ProgrammeController extends Controller
      */
     public function store(Request $request): JsonResponse
     {
-        $dataRead = $request->all();
-
-        $programmeToSave = new Programme();
-
-        $programmeToSave->setTitle($dataRead['title']);
-        $programmeToSave->setChannel($dataRead['channel']);
-        $programmeToSave->setBroadcast($dataRead['broadcast']);
-        $programmeToSave->setRepeat($dataRead['repeat']);
-        if (!empty($dataRead['genre'])) {
-            $programmeToSave->setGenre($dataRead['genre']);
-        }
-        $programmeToSave->save();
-
-        return response()->json([
-            'message' => 'Request succesfully',
-            'data'   => null,
-            'status' => Response::HTTP_CREATED,
+        $validator = Validator::make($request->all(), [
+            'title'     => 'required|unique:programmes',
+            'channel'   => 'required',
+            'broadcast' => 'required',
+            'repeat'    => 'required',
+            'genre'     => 'nullable|string',
         ]);
+
+        if ($validator->fails()) {
+            $errors = $validator->errors();
+
+            return response()->json([
+                'message' => $errors,
+                'data'    => 'Request unsuccessfull',
+                'status'  => Response::HTTP_BAD_REQUEST,
+            ]);
+        } else {
+            $dataRead = $request->all();
+
+            $programmeToSave = new Programme();
+
+            $programmeToSave->setTitle($dataRead['title']);
+            $programmeToSave->setChannel($dataRead['channel']);
+            $programmeToSave->setBroadcast($dataRead['broadcast']);
+            $programmeToSave->setRepeat($dataRead['repeat']);
+            if (!empty($dataRead['genre'])) {
+                $programmeToSave->setGenre($dataRead['genre']);
+            }
+            $programmeToSave->save();
+
+            return response()->json([
+                'message' => 'Request succesfully',
+                'data'   => null,
+                'status' => Response::HTTP_CREATED,
+            ]);
+        }
     }
 
     /**
