@@ -46,14 +46,28 @@ class ProgrammeController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * @param int $id
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return JsonResponse
      */
-    public function show($id)
+    public function show(int $id): JsonResponse
     {
-        //
+        $programme = Programme::find($id);
+
+        if (empty($programme)){
+            $response = response()->json([
+                'message' => 'Resource not found',
+                'data'    => $programme,
+                'status'  => Response::HTTP_NOT_FOUND,
+            ]);
+        } else {
+            $response = response()->json([
+                'message' => 'Request succesfull',
+                'data'    => $programme,
+                'status'  => Response::HTTP_OK,
+            ]);
+        }
+        return $response;
     }
 
     /**
