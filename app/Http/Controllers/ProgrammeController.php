@@ -25,14 +25,30 @@ class ProgrammeController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * @param Request $request
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return JsonResponse
      */
-    public function store(Request $request)
+    public function store(Request $request): JsonResponse
     {
-        //
+        $dataRead = $request->all();
+
+        $programmeToSave = new Programme();
+
+        $programmeToSave->setTitle($dataRead['title']);
+        $programmeToSave->setChannel($dataRead['channel']);
+        $programmeToSave->setBroadcast($dataRead['broadcast']);
+        $programmeToSave->setRepeat($dataRead['repeat']);
+        if (!empty($dataRead['genre'])) {
+            $programmeToSave->setGenre($dataRead['genre']);
+        }
+        $programmeToSave->save();
+
+        return response()->json([
+            'message' => 'Request succesfully',
+            'data'   => null,
+            'status' => Response::HTTP_CREATED,
+        ]);
     }
 
     /**
