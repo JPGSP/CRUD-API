@@ -1,6 +1,6 @@
 # CRUD API
 
-The purpose of this project is to perform a RESTful API to implement implements the four 
+The purpose of this project is to perform a RESTful API to implement the four 
 basic functions of persistent storage (CRUD).
 
 ## System requirements
@@ -36,7 +36,7 @@ Go inside the folder just created:
 cd /path/to/projects/folder/crud-api
 ```
 
-Install the project's dependencies
+Install project dependencies
 
 ```bash
 composer install
@@ -75,7 +75,7 @@ php artisan serve
 
 ### API
 
-To guarantee the right functionality of the API, please being sure you have some stored 
+To guarantee the right functionality of the API, please ensure that you have stored some
 data.
 
 To access the API
@@ -87,7 +87,7 @@ The project contains functionality to generate random data (seeder)
 
 ## Next?
 
-Implements all the following cases in Behat
+Implement all the following cases in Behat
 
 - Get one programme which exists in the system. No error
 
@@ -97,7 +97,7 @@ Implements all the following cases in Behat
 
 ![get_one_programme_error](https://user-images.githubusercontent.com/31289182/49411324-60567500-f760-11e8-9937-04bdee9e53d0.png)
 
-- Create a new programme following the requirements. Not error 
+- Create a new programme following the requirements. No error 
 ![create_new_programme_success](https://user-images.githubusercontent.com/31289182/49411382-90057d00-f760-11e8-8ddd-45a783110efc.png)
 
 
@@ -106,7 +106,7 @@ Implements all the following cases in Behat
 ![create_new_programme_error_2](https://user-images.githubusercontent.com/31289182/49411407-b88d7700-f760-11e8-8c65-d60498063ba6.png)
 
 
-- Update an existing programme following the requirements. Not error 
+- Update an existing programme following the requirements. No error 
 
 ![update_programme_successfull](https://user-images.githubusercontent.com/31289182/49411533-29349380-f761-11e8-860c-68d33802e90b.png)
 
@@ -114,10 +114,10 @@ Implements all the following cases in Behat
 
 ![update_programme_error](https://user-images.githubusercontent.com/31289182/49411462-e96dac00-f760-11e8-9852-abbf996cb4f6.png)
 
-- Update a an existing programme without following the requirements. Error
+- Update the existing programme without following the requirements. Error
 
 
-- Delete an existing programme. Not error
+- Delete the existing programme. No error
 
 ![delete_one_programme_success](https://user-images.githubusercontent.com/31289182/49411577-541ee780-f761-11e8-8a8a-8c595ff89c6c.png)
 
