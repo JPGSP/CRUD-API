@@ -98,6 +98,7 @@ Implements all the following cases in Behat
 ![get_one_programme_error](https://user-images.githubusercontent.com/31289182/49411324-60567500-f760-11e8-9937-04bdee9e53d0.png)
 
 - Create a new programme following the requirements. Not error 
+![create_new_programme_success](https://user-images.githubusercontent.com/31289182/49411382-90057d00-f760-11e8-8ddd-45a783110efc.png)
 
 
 - Create a new programme without following the requirements. Error
