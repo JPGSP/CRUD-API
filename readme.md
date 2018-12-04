@@ -119,5 +119,8 @@ Implements all the following cases in Behat
 
 - Delete an existing programme. Not error
 
+![delete_one_programme_success](https://user-images.githubusercontent.com/31289182/49411577-541ee780-f761-11e8-8a8a-8c595ff89c6c.png)
+
 
 - Delete a non existing programme. Error.
+
