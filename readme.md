@@ -26,7 +26,7 @@ git clone https://github.com/JPGSP/crud-api.git
 
 Once the previous process has finished a new folder ```crud-api``` will be created.
 
-## Executed the code
+## Usage
 
 - Install dependecies
 
@@ -84,3 +84,25 @@ web/server/api/programme
 ```
 
 The project contains functionality to generate random data (seeder)
+
+## Next?
+
+Implements all the following cases in Behat
+
+- Get one programme which exists in the system. No error
+
+- Get one programme which does not exists in the system. Error
+
+- Create a new programme following the requirements. Not error 
+ 
+- Create a new programme without following the requirements. Error
+
+- Update an existing programme following the requirements. Not error 
+
+- Update a non existing programme. Error
+
+- Update a an existing programme without following the requirements. Error
+
+- Delete an existing programme. Not error
+
+- Delete a non existing programme. Error.
