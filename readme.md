@@ -1,7 +1,7 @@
 # CRUD API
 
-Simple restful API which implements the four basic functions of persistent storage (CRUD).
-
+The purpose of this project is to perform a RESTful API to implement implements the four 
+basic functions of persistent storage (CRUD).
 
 ## System requirements
 
@@ -28,7 +28,7 @@ Once the previous process has finished a new folder ```crud-api``` will be creat
 
 ## Executed the code
 
-1. Install dependecies
+- Install dependecies
 
 Go inside the folder just created:
 
@@ -36,13 +36,13 @@ Go inside the folder just created:
 cd /path/to/projects/folder/crud-api
 ```
 
-Install the project dependencies
+Install the project's dependencies
 
 ```bash
 composer install
 ```
 
-2. Connection with the database.
+- Connection with the database.
 
 Rename the file ```.env.example``` to ```.env```.
 Change the values of the following parameters based on the database configuration.
@@ -56,16 +56,31 @@ DB_USERNAME
 DB_PASSWORD
 ```
 
-3. Run the project.
+- Run the project.
 
-From the command line inside 
+Before you can run the project, you must set a key option in your config/app.php 
+configuration file.
+
+Go to the project folder and run
 
 ```bash
-cd /path/to/projects/folder/crud-api/
+php artisan key:generate
 ```
 
-Type
+After that, you can run the project.
 
 ```bash
 php artisan serve
 ```
+
+### API
+
+To guarantee the right functionality of the API, please being sure you have some stored 
+data.
+
+To access the API
+```bash
+web/server/api/programme 
+```
+
+The project contains functionality to generate random data (seeder)
