@@ -108,6 +108,7 @@ Implements all the following cases in Behat
 
 - Update an existing programme following the requirements. Not error 
 
+![update_programme_successfull](https://user-images.githubusercontent.com/31289182/49411533-29349380-f761-11e8-860c-68d33802e90b.png)
 
 - Update a non existing programme. Error
 
