@@ -90,11 +90,12 @@ The project contains functionality to generate random data (seeder)
 Implements all the following cases in Behat
 
 - Get one programme which exists in the system. No error
+
 ![get_one_programme_success](https://user-images.githubusercontent.com/31289182/49411283-3735e480-f760-11e8-8f4a-31a03359f15e.png)
 
 - Get one programme which does not exists in the system. Error
 
-
+![get_one_programme_error](https://user-images.githubusercontent.com/31289182/49411324-60567500-f760-11e8-9937-04bdee9e53d0.png)
 
 - Create a new programme following the requirements. Not error 
 
