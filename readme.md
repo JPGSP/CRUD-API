@@ -124,3 +124,4 @@ Implements all the following cases in Behat
 
 - Delete a non existing programme. Error.
 
+![image](https://user-images.githubusercontent.com/31289182/49411612-7284e300-f761-11e8-9abf-c377ba4638db.png)
