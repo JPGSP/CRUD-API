@@ -111,6 +111,7 @@ Implements all the following cases in Behat
 
 - Update a non existing programme. Error
 
+![update_programme_error](https://user-images.githubusercontent.com/31289182/49411462-e96dac00-f760-11e8-9852-abbf996cb4f6.png)
 
 - Update a an existing programme without following the requirements. Error
 
