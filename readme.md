@@ -90,7 +90,7 @@ The project contains functionality to generate random data (seeder)
 Implements all the following cases in Behat
 
 - Get one programme which exists in the system. No error
-
+![alt text]()
 
 - Get one programme which does not exists in the system. Error
 
