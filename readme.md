@@ -103,6 +103,8 @@ Implements all the following cases in Behat
 
 - Create a new programme without following the requirements. Error
 
+![create_new_programme_error_2](https://user-images.githubusercontent.com/31289182/49411407-b88d7700-f760-11e8-8c65-d60498063ba6.png)
+
 
 - Update an existing programme following the requirements. Not error 
 
